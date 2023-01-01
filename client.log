@@ -1,11 +1,3 @@
-2022-12-31 18:06:52.567 [Thread-0] INFO  org.brianbruce.bio.EchoClient - ReaderTask starting...
-2022-12-31 18:07:11.669 [Thread-0] INFO  org.brianbruce.bio.EchoClient - Put a line...
-2022-12-31 18:07:11.669 [main] INFO  org.brianbruce.bio.EchoClient - ===> test
-2022-12-31 18:07:11.673 [main] INFO  org.brianbruce.bio.EchoClient - <=== test
-2022-12-31 18:07:36.339 [main] INFO  org.brianbruce.bio.EchoClient - ===> whao
-2022-12-31 18:07:36.340 [Thread-0] INFO  org.brianbruce.bio.EchoClient - Put a line...
-2022-12-31 18:07:36.340 [main] INFO  org.brianbruce.bio.EchoClient - <=== whao
-2022-12-31 18:07:51.369 [main] INFO  org.brianbruce.bio.EchoClient - ===> BYE
-2022-12-31 18:07:51.369 [Thread-0] INFO  org.brianbruce.bio.EchoClient - Put a line...
-2022-12-31 18:07:51.370 [main] INFO  org.brianbruce.bio.EchoClient - <=== BYE
-2022-12-31 18:07:51.370 [main] INFO  org.brianbruce.bio.EchoClient - Socket closed
+2022-12-31 18:35:25.477 [main] INFO  org.brianbruce.nio.EchoClient - ===> sdfasdf
+2022-12-31 18:36:09.723 [main] INFO  org.brianbruce.nio.EchoClient - ===> dfgdfg
+2022-12-31 18:38:03.739 [main] INFO  org.brianbruce.nio.EchoClient - Reading

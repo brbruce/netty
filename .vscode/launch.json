@@ -19,6 +19,22 @@
       "mainClass": "org.brianbruce.bio.EchoServer",
       "projectName": "netty",
       "vmArgs": "-Dlog4j2.configurationFile=${workspaceFolder}\\src\\main\\resources\\log4j2server.xml",
+    },
+    {
+      "type": "java",
+      "name": "Launch EchoClient nio",
+      "request": "launch",
+      "mainClass": "org.brianbruce.nio.EchoClient",
+      "projectName": "netty",
+      "vmArgs": "-Dlog4j2.configurationFile=${workspaceFolder}\\src\\main\\resources\\log4j2client.xml",
+    },
+    {
+      "type": "java",
+      "name": "Launch EchoServer nio",
+      "request": "launch",
+      "mainClass": "org.brianbruce.nio.EchoServer",
+      "projectName": "netty",
+      "vmArgs": "-Dlog4j2.configurationFile=${workspaceFolder}\\src\\main\\resources\\log4j2server.xml",
     }
   ]
 }
