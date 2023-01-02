@@ -35,14 +35,26 @@ public class EchoClient {
     final var writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
     final var reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
+    final char[] buff = new char[1024];
+
     for (var msg = queue.take(); !Thread.interrupted(); msg = queue.take()) {
       LOGGER.info("===> " + msg);
 
       writer.write(msg);
-      writer.newLine();
+      // writer.newLine();
       writer.flush();
 
-      final var response = reader.readLine();
+      // final var response = reader.readLine();
+
+
+      final var charsRead = reader.read(buff);
+      String response;
+      if (charsRead != -1) {
+        response = new String(buff, 0, charsRead);
+      } else {
+        response = "";
+      }
+
       LOGGER.info("<=== " + response);
 
       if (response.equals(POISON_PILL)) {

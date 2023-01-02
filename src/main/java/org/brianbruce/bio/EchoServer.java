@@ -52,15 +52,32 @@ public class EchoServer {
     @Override
     public void run() {
       LOGGER.info("Handling request");
+
+      final char[] buff = new char[1024];
+
       try (final Socket ignored = socket;
           final BufferedWriter writer =
               new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
           final BufferedReader reader =
               new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-        for (String line = reader.readLine(); line != null; line = reader.readLine()) {
+
+        // for (String line = reader.readLine(); line != null; line = reader.readLine()) {
+
+
+        while (true) {
+
+          final var charsRead = reader.read(buff);
+          String line;
+          if (charsRead != -1) {
+            line = new String(buff, 0, charsRead);
+          } else {
+            line = "";
+          }
+
+
           LOGGER.info("<=== " + line);
           writer.write(line);
-          writer.newLine();
+          // writer.newLine();
           writer.flush();
           LOGGER.info("===> " + line);
           if (line.equals(POISON_PILL)) {
